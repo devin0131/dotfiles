@@ -1,0 +1,188 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- NVIM STARTING ---
+000.268  000.264: locale set
+000.558  000.290: inits 1
+000.567  000.009: window checked
+000.570  000.003: parsing arguments
+002.701  002.132: expanding arguments
+002.723  000.022: inits 2
+003.220  000.497: init highlight
+003.222  000.002: waiting for UI
+004.114  000.892: done waiting for UI
+004.134  000.020: init screen for UI
+004.154  000.021: init default mappings
+004.187  000.033: init default autocommands
+005.938  000.051  000.051: sourcing /usr/share/nvim/runtime/ftplugin.vim
+006.279  000.030  000.030: sourcing /usr/share/nvim/runtime/indent.vim
+012.977  005.618  005.618: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/catppuccin/colors/catppuccin.vim
+015.218  001.475  001.475: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/catppuccin/colors/catppuccin.vim
+092.764  086.414  079.321: sourcing /home/devin/.config/nvim/init.lua
+092.771  002.089: sourcing vimrc file(s)
+093.057  000.016  000.016: sourcing /usr/share/nvim/runtime/filetype.lua
+096.308  000.006  000.006: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/LuaSnip/ftdetect/snippets.vim
+096.897  000.017  000.017: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-treesitter/autoload/nvim_treesitter.vim
+096.971  003.906  003.882: sourcing /usr/share/nvim/runtime/filetype.vim
+097.225  000.042  000.042: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+097.294  000.273  000.232: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+098.249  000.149  000.149: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+098.263  000.005  000.005: sourcing /usr/share/nvim/runtime/plugin/health.vim
+098.328  000.059  000.059: sourcing /usr/share/nvim/runtime/plugin/man.vim
+098.570  000.114  000.114: sourcing /usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+098.614  000.280  000.166: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+098.695  000.074  000.074: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+098.957  000.255  000.255: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+100.393  000.089  000.089: sourcing /usr/share/nvim/runtime/autoload/remote/host.vim
+100.682  000.075  000.075: sourcing /usr/share/nvim/runtime/autoload/remote/define.vim
+101.480  002.444  002.279: sourcing /home/devin/.local/share/nvim/rplugin.vim
+101.484  002.514  000.071: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+101.565  000.067  000.067: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+101.588  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+101.685  000.090  000.090: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+101.737  000.041  000.041: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+101.753  000.009  000.009: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+101.864  000.103  000.103: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+102.079  000.173  000.173: sourcing /home/devin/.config/nvim/plugin/packer_compiled.lua
+102.160  001.361: loading rtp plugins
+102.551  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/AutoSave.nvim/plugin/ascmds.vim
+102.631  000.036  000.036: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/DAPInstall.nvim/plugin/dicmds.vim
+102.710  000.036  000.036: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/HighStr.nvim/plugin/hscmds.vim
+102.933  000.178  000.178: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/LuaSnip/plugin/luasnip.vim
+103.022  000.015  000.015: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/catppuccin/plugin/catppuccin.vim
+103.035  000.005  000.005: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/catppuccin/plugin/ctpcmds.vim
+103.241  000.081  000.081: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/diffview.nvim/plugin/diffview.vim
+104.518  000.047  000.047: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/gen_tags.vim/autoload/gen_tags/gtags.vim
+104.647  000.054  000.054: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/gen_tags.vim/autoload/gen_tags.vim
+105.344  002.039  001.937: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/gen_tags.vim/plugin/gen_tags.vim
+105.536  000.111  000.111: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/hop.nvim/plugin/hop.vim
+105.760  000.169  000.169: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim/plugin/indent_blankline.vim
+105.850  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/neovim-cmake/plugin/cmake.vim
+106.002  000.094  000.094: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/neovim-session-manager/plugin/session_manager.lua
+106.055  000.011  000.011: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-bqf/plugin/bqf.vim
+106.322  000.217  000.217: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-cmp/plugin/cmp.lua
+106.386  000.025  000.025: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua/plugin/colorizer.vim
+106.543  000.053  000.053: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/plugin/nvim-lsp-installer.vim
+106.636  000.045  000.045: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/plugin/lspconfig.vim
+107.029  000.311  000.311: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+107.093  000.008  000.008: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context/plugin/treesitter-context.vim
+107.158  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+107.231  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+107.298  000.007  000.007: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/sniprun/plugin/sniprun.vim
+107.473  000.079  000.079: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+107.540  000.014  000.014: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/todo-comments.nvim/plugin/todo.vim
+107.654  000.063  000.063: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/trouble.nvim/plugin/trouble.vim
+107.746  000.047  000.047: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-autoread/plugin/autoread.vim
+108.253  000.465  000.465: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-bookmarks/plugin/bookmark.vim
+108.381  000.075  000.075: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-illuminate/plugin/illuminate.vim
+108.440  000.013  000.013: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-local-history/plugin/vim_local_history.vim
+108.685  000.195  000.195: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-surround/plugin/surround.vim
+109.003  000.071  000.071: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test.vim
+109.455  000.717  000.646: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/plugin/test.vim
+109.827  000.317  000.317: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-ultest/plugin/ultest.vim
+109.888  000.008  000.008: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/which-key.nvim/plugin/which-key.vim
+109.990  000.060  000.060: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/winshift.nvim/plugin/winshift.vim
+110.060  002.325: loading packages
+110.310  000.119  000.119: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp-buffer/after/plugin/cmp_buffer.lua
+110.410  000.070  000.070: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp-cmdline/after/plugin/cmp_cmdline.lua
+110.501  000.062  000.062: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua
+110.578  000.049  000.049: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua
+110.665  000.051  000.051: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp-path/after/plugin/cmp_path.lua
+110.747  000.053  000.053: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp-spell/after/plugin/cmp-spell.lua
+110.869  000.093  000.093: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/cmp_luasnip/after/plugin/cmp_luasnip.lua
+110.878  000.321: loading after plugins
+110.886  000.008: inits 3
+112.639  001.753: reading ShaDa
+115.561  002.922: opening buffers
+116.637  000.068  000.068: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/base.vim
+116.834  000.023  000.023: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/racket/rackunit.vim
+117.053  000.027  000.027: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/clojure/fireplacetest.vim
+117.267  000.022  000.022: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/elm/elmtest.vim
+117.471  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/codeception.vim
+117.659  000.018  000.018: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/dusk.vim
+117.852  000.026  000.026: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/pest.vim
+118.049  000.029  000.029: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/phpunit.vim
+118.240  000.023  000.023: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/behat.vim
+118.424  000.017  000.017: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/phpspec.vim
+118.607  000.017  000.017: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/kahlan.vim
+118.796  000.017  000.017: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/php/peridot.vim
+119.009  000.032  000.032: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/java/maventest.vim
+119.214  000.028  000.028: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/java/gradletest.vim
+119.407  000.015  000.015: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/viml/themis.vim
+119.592  000.017  000.017: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/viml/vspec.vim
+119.776  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/viml/vader.vim
+119.958  000.015  000.015: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/viml/testify.vim
+120.140  000.014  000.014: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/viml/vroom.vim
+120.337  000.024  000.024: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/csharp/xunit.vim
+120.534  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/csharp/dotnettest.vim
+120.728  000.018  000.018: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/scala/sbttest.vim
+120.894  000.013  000.013: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/scala.vim
+121.095  000.023  000.023: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/scala/blooptest.vim
+121.306  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/elixir/exunit.vim
+121.491  000.014  000.014: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/elixir/espec.vim
+121.678  000.017  000.017: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/perl/prove.vim
+121.866  000.015  000.015: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/mint/minttest.vim
+122.082  000.031  000.031: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/groovy/maventest.vim
+122.293  000.026  000.026: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/groovy/gradletest.vim
+122.496  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/haskell/stacktest.vim
+122.663  000.010  000.010: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/haskell.vim
+122.862  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/ruby/rails.vim
+123.053  000.015  000.015: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/ruby/m.vim
+123.254  000.032  000.032: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/ruby/minitest.vim
+123.441  000.016  000.016: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/ruby/rspec.vim
+123.624  000.016  000.016: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/ruby/cucumber.vim
+123.811  000.015  000.015: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/ruby/testbench.vim
+124.006  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/dart/darttest.vim
+124.161  000.007  000.007: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/dart.vim
+124.360  000.022  000.022: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/dart/fluttertest.vim
+124.556  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/shell/bats.vim
+124.747  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/shell/shellspec.vim
+124.945  000.024  000.024: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/swift/swiftpm.vim
+125.142  000.014  000.014: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/crystal/crystalspec.vim
+125.342  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/ava.vim
+125.546  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/cucumberjs.vim
+125.751  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/denotest.vim
+125.958  000.027  000.027: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/intern.vim
+126.159  000.025  000.025: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/tap.vim
+126.359  000.023  000.023: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/karma.vim
+126.553  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/lab.vim
+126.754  000.023  000.023: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/mocha.vim
+126.945  000.014  000.014: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/ngtest.vim
+127.137  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/nx.vim
+127.336  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/jasmine.vim
+127.529  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/jest.vim
+127.739  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/reactscripts.vim
+127.938  000.016  000.016: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/webdriverio.vim
+128.141  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/cypress.vim
+128.353  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/javascript/vuetestutils.vim
+128.554  000.018  000.018: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/erlang/commontest.vim
+128.737  000.016  000.016: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/erlang/eunit.vim
+128.931  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/erlang/proper.vim
+129.137  000.026  000.026: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/kotlin/gradletest.vim
+129.354  000.022  000.022: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/go/gotest.vim
+129.511  000.011  000.011: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/go.vim
+129.705  000.024  000.024: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/go/ginkgo.vim
+129.893  000.016  000.016: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/go/richgo.vim
+130.085  000.023  000.023: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/go/delve.vim
+130.286  000.021  000.021: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/lua/busted.vim
+130.498  000.037  000.037: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/rust/cargotest.vim
+130.693  000.018  000.018: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/behave.vim
+130.894  000.027  000.027: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/djangotest.vim
+131.094  000.024  000.024: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/pytest.vim
+131.291  000.022  000.022: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/pyunit.vim
+131.477  000.018  000.018: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/nose.vim
+131.666  000.019  000.019: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/nose2.vim
+131.858  000.020  000.020: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-test/autoload/test/python/mamba.vim
+131.888  014.674: BufEnter autocommands
+131.890  000.002: editing files in windows
+142.018  000.084  000.084: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-bookmarks/autoload/bm.vim
+142.167  010.192: VimEnter autocommands
+142.170  000.003: UIEnter autocommands
+152.991  010.608  010.608: sourcing /usr/share/nvim/runtime/autoload/provider/clipboard.vim
+153.001  000.223: before starting main loop
+153.672  000.147  000.147: sourcing /home/devin/.local/share/nvim/site/pack/packer/start/vim-illuminate/autoload/illuminate.vim
+155.230  002.082: first screen update
+155.233  000.003: --- NVIM STARTED ---
