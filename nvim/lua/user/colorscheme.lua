@@ -6,11 +6,12 @@
 -- require "user.conf.github-nvim-theme"
 -- local colorscheme = "default"
 -- local colorscheme = "gruvbox"
-local colorscheme = "nightfox"
+-- local colorscheme = "nightfox"
 -- local colorscheme = "zenburn"
+local colorscheme = "melange"
 
 if colorscheme == "onedark" then
-  require "user.themes.onedark"
+  rjquire "user.themes.onedark"
 elseif colorscheme == "catppuccin" then
   require "user.themes.catppuccin"
 elseif colorscheme == "github_dark" then
@@ -26,6 +27,8 @@ elseif colorscheme == "nightfox" then
   require "user.themes.nightfox"
 elseif colorscheme == "zenburn" then
   require "user.themes.zenburn"
+elseif colorscheme == "melange" then
+  vim.opt.termguicolors = true
 end
 
 vim.cmd('colorscheme ' .. colorscheme)

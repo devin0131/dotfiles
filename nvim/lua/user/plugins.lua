@@ -237,6 +237,10 @@ return packer.startup(function(use)
   use {
     "phha/zenburn.nvim"
   }
+  use {
+    "savq/melange"
+  }
+
 
   -- use "folke/tokyonight.nvim"
   use "kyazdani42/nvim-tree.lua" -- file explore

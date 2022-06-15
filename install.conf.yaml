@@ -1,0 +1,34 @@
+- defaults:
+    link:
+        relink: true
+- shell:
+    -
+        # command: '[[ $var == "y" || $var == "Y" || $var == "yes" ]] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || unset $var '
+        command: read var && if ([[ $var == "y" || $var == "Y" || $var == "yes" ]]); then sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi
+        description: 是否需要自动安装oh-my-zsh？\n
+        stdin: true 
+        stdout: true
+        quiet: false
+    - 
+        command: gg=`pwd` && str="sed -i '/^plugins=(.*)$/csource ${gg}/zsh/zshrcdevin' ~/.zshrc" && eval $str
+        description: 将个人的脚本插入.zshrc里边
+
+
+- link:
+    ~/.config/nvim: nvim
+    ~/.oh-my-zsh/custom/plugins/:
+        if: '[ -n $(which omz) ]'
+        glob: true
+        path: zsh/plugins/* 
+    ~/.tmux/plugins/tpm:
+        create: true
+        if: '[ -n $(which tmux) ]'
+        path: tmux/plugins/tpm
+    ~/.tmux.conf:
+        if: '[ -n $(which tmux) ]'
+        path: tmux.conf
+
+
+  
+
+
