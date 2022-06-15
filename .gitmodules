@@ -11,3 +11,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "zsh/themes/fishboned"]
+	path = zsh/themes/fishboned
+	url = https://github.com/sidingxin/fishboned.git

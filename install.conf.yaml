@@ -17,9 +17,12 @@
 - link:
     ~/.config/nvim: nvim
     ~/.oh-my-zsh/custom/plugins/:
-        if: '[ -n $(which omz) ]'
+        if: '[[ -n $(which omz) ]]'
         glob: true
         path: zsh/plugins/* 
+    ~/.oh-my-zsh/custom/themes/fishboned.zsh-theme:
+        if: '[[ -n $(which omz) ]]'
+        path: zsh/themes/fishboned/fishboned.zsh-theme
     ~/.tmux/plugins/tpm:
         create: true
         if: '[ -n $(which tmux) ]'
