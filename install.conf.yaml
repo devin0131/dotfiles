@@ -3,7 +3,6 @@
         relink: true
 - shell:
     -
-        # command: '[[ $var == "y" || $var == "Y" || $var == "yes" ]] && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || unset $var '
         command: read var && if ([[ $var == "y" || $var == "Y" || $var == "yes" ]]); then sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; fi
         description: 是否需要自动安装oh-my-zsh？\n
         stdin: true 
