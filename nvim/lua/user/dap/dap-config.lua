@@ -1,34 +1,34 @@
 local M = {}
 
 local function config_dapi_and_sign()
-  local dap_install = require "dap-install"
-  dap_install.setup {
-    installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
-  }
+  -- local dap_install = require "dap-install"
+  -- dap_install.setup {
+  --   installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
+  -- }
 
   local dap_breakpoint = {
-    error = {
+    breakpoint = {
       text = "🛑",
-      texthl = "LspDiagnosticsSignError",
+      texthl = "DiagnosticSignError",
       linehl = "",
       numhl = "",
     },
     rejected = {
       text = "",
-      texthl = "LspDiagnosticsSignHint",
+      texthl = "DiagnosticSignHint",
       linehl = "",
       numhl = "",
     },
-    stopped = {
-      text = "⭐️",
-      texthl = "LspDiagnosticsSignInformation",
-      linehl = "DiagnosticUnderlineInfo",
-      numhl = "LspDiagnosticsSignInformation",
-    },
+    -- stopped = {
+    --   text = "⭐️",
+    --   texthl = "DiagnosticSignInformation",
+    --   linehl = "DiagnosticUnderlineInfo",
+    --   numhl = "LspDiagnosticsSignInformation",
+    -- },
   }
 
-  vim.fn.sign_define("DapBreakpoint", dap_breakpoint.error)
-  vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
+  vim.fn.sign_define("DapBreakpoint", dap_breakpoint.breakpoint)
+  -- vim.fn.sign_define("DapStopped", dap_breakpoint.stopped)
   vim.fn.sign_define("DapBreakpointRejected", dap_breakpoint.rejected)
 end
 
@@ -43,9 +43,9 @@ local function config_dapui()
     dap.repl.close()
     dapui.close()
     vim.api.nvim_command("DapVirtualTextDisable")
-    vim.api.nvim_command("bdelete! term:")   -- close debug temrinal
+    -- vim.api.nvim_command("bdelete! term:")   -- close debug temrinal
   end
-
+  -- 一下有關Event的描述：https://microsoft.github.io/debug-adapter-protocol/specification#Requests
   dap.listeners.after.event_initialized["dapui_config"] = function()
     debug_open()
   end
@@ -68,19 +68,10 @@ local function config_debuggers()
   dap.set_log_level("DEBUG")
 
   -- load from json file
-  require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } })
+  -- require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } })
   -- config per launage
-  -- require("user.dap.dap-cpp")
-  require("user.dap.di-cpp")
-  -- require("user.dap.dap-go")
-  require("user.dap.di-go")
-  require("user.dap.di-python")
+  require("user.dap.dap-cpp")
   require("user.dap.dap-lua")
-
-  -- require("user.dap.dap-cpp")
-  -- require("config.dap.python").setup()
-  -- require("config.dap.rust").setup()
-  -- require("config.dap.go").setup()
 end
 
 function M.setup()

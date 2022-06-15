@@ -14,9 +14,13 @@ M.setup = function()
   -- plugins do not need to load, NOTE: no .lua suffix required
   local unload_plugins = {
     "init", -- we don't need to load init again
+    "nvim-lightbulb",
+    "clangd_extensions",
+    "nvim_bqf",
     "vgit",
     "nvim-hlslens",
     "auto-session",
+    "autosave",
     "vim-illuminate",
     "vista",
     "symbols-outline",

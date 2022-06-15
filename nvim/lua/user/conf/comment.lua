@@ -12,7 +12,7 @@ comment.setup {
   -- Should key mappings be created
   create_mappings = true,
   -- Normal mode mapping left hand side
-  line_mapping = "<leader>cc",
+  line_mapping = "<leader>cl",
   -- Visual/Operator mapping left hand side
   operator_mapping = "<leader>c",
   -- Hook function to call before commenting takes place

@@ -34,7 +34,7 @@ lightbulb.setup {
         win_opts = {},
     },
     virtual_text = {
-        enabled = true,
+        enabled = false,
         -- Text to show at virtual text
         text = "💡",
         -- highlight mode to use for virtual text (replace, combine, blend), see :help nvim_buf_set_extmark() for reference

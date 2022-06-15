@@ -20,9 +20,11 @@ session_manager.setup({
 })
 
 
-vim.cmd([[
-  augroup _open_nvim_tree
-    autocmd! * <buffer>
-    autocmd SessionLoadPost * silent! lua require("nvim-tree").toggle(false, true)
-  augroup end
-]])
+
+-- 打开一个文件的时候，自动打开nvim-tree
+-- vim.cmd([[
+--   augroup _open_nvim_tree
+--     autocmd! * <buffer>
+--     autocmd SessionLoadPost * silent! lua require("nvim-tree").toggle(false, true)
+--   augroup end
+-- ]])

@@ -17,8 +17,8 @@ local setup = {
       operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
       motions = false, -- adds help for motions
       text_objects = false, -- help for text objects triggered after entering an operator
-      windows = true, -- default bindings on <c-w>
-      nav = true, -- misc bindings to work with windows
+      windows = false, -- default bindings on <c-w>
+      nav = false, -- misc bindings to work with windows
       z = false, -- bindings for folds, spelling and others prefixed with z
       g = false, -- bindings for prefixed with g
     },
@@ -96,7 +96,7 @@ local mappings = {
     "Find files",
   },
   -- ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["F"] = { "<cmd>lua require('telescope').extensions.live_grep_raw.live_grep_raw(require('telescope.themes').get_ivy())<cr>", 
+  ["F"] = { "<cmd>lua require('telescope').extensions.live_grep_raw.live_grep_raw(require('telescope.themes').get_ivy())<cr>",
     "Find Text"
   },
   ["s"] = {
@@ -136,16 +136,16 @@ local mappings = {
     s = {"<cmd>CMake set_target_args<CR>", "SetArg"},
   },
 
-  d = {
-    name = "Debug",
-    R = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
-    E = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
-    X = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
-    -- C = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", "Conditional Breakpoint" },
-    T = { "<cmd>lua require'dapui'.toggle('sidebar')<cr>", "Toggle Sidebar" },
-    p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
-    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-    q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+  -- d = {
+  --   name = "Debug",
+  --   R = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
+  --   E = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },
+  --   X = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+  --   -- C = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", "Conditional Breakpoint" },
+  --   T = { "<cmd>lua require'dapui'.toggle('sidebar')<cr>", "Toggle Sidebar" },
+  --   p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
+  --   r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+  --   q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
 
     -- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
     -- c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
@@ -157,8 +157,8 @@ local mappings = {
     -- i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
     -- o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
     -- t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
-    -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
-  },
+  --   -- u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+  -- },
 
   T = {
     name = "Trouble",
@@ -166,32 +166,28 @@ local mappings = {
     d = { "<cmd>Trouble document_diagnostics<cr>", "Document Diagnostics"},
     w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics"},
     q = { "<cmd>Trouble quickfix<cr>", "Quick Fix"},
-    u = { "<cmd>Trouble lsp_references<cr>", "Usage"},
-    g = { "<cmd>Gitsigns setloclist<cr>", "Open changed hunk" },
+    -- u = { "<cmd>Trouble lsp_references<cr>", "Usage"},
+    -- g = { "<cmd>Gitsigns setloclist<cr>", "Open changed hunk" },
   },
 
 
   g = {
      name = "Git",
      g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-     f = { "<cmd>DiffviewFileHistory<CR>", "File History" },
-     p = { "<cmd>DiffviewOpen<CR>", "Diff Project" },
+     f = { "<cmd>DiffviewFileHistory<CR>", "File History(DiffView)" },
+     p = { "<cmd>DiffviewOpen<CR>", "Diff Project(DiffView)" },
      n = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
      N = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
      l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-     s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-     S = { "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", "Stage Hunk" },
+     r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Current Hunk" },
+     R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer Hunk" },
+     s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Current Hunk" },
+     S = { "<cmd>lua require 'gitsigns'.stage_buffer()<cr>", "Stage Buffer Hunk" },
      u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk", },
-     U = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk", },
-     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-     d = {
-       "<cmd>Gitsigns diffthis HEAD<cr>",
-       "Diff",
-     },
+     d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff This", },
+     o = { "<cmd>Telescope git_status<cr>", "git_status" },
+     b = { "<cmd>Telescope git_branches<cr>", "git branch" },
+     c = { "<cmd>Telescope git_commits<cr>", "git commit" },
    },
 
   R = {
@@ -209,29 +205,33 @@ local mappings = {
 
   l = {
     name = "LSP",
-    l = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
+    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+    l = {
+      name = "Language features" ,
+      d = {
+        "<cmd> lua vim.lsp.buf.definition()<cr>",
+        "Go to Definition"
+      },
+      r = {
+        "<cmd> lua vim.lsp.buf.references()<cr>",
+        "Go to References"
+      },
+      i = { "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", "Incoming CallTree" },
+      D = {
+        "<cmd> lua vim.lsp.buf.declaration()<cr>",
+        "Go to Declaration"
+      },
+      t = {
+        "<cmd> lua vim.lsp.buf.type_definition()<cr>",
+        "Go to Type Defination"
+      }
     },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
+    f = {
+      name = "format",
+      f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format" },
+      r = { "<cmd>lua vim.lap.buf.range_formatting()<cr>", "Range Format"},
     },
-    -- i = { "<cmd>LspInfo<cr>", "Info" },
-    i = { "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", "CallTree" },
-    f = { "<cmd>Format<cr>", "Format" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     S = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
@@ -239,8 +239,26 @@ local mappings = {
     },
     p = {
       "<cmd>lua require('goto-preview').goto_preview_definition()<cr>",
-      "definition preview"
+      "Preview Definition"
     }
+    ------ 一些跟diagnostic 有关的， 目前不知道干嘛的 --
+    -- w = {
+    --   "<cmd>Telescope lsp_workspace_diagnostics<cr>",
+    --   "Workspace Diagnostics",
+    -- },
+    -- d = {
+    --   "<cmd>Telescope lsp_document_diagnostics<cr>",
+    --   "Document Diagnostics",
+    -- },
+    -- j = {
+    --   "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+    --   "Next Diagnostic",
+    -- },
+    -- k = {
+    --   "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
+    --   "Prev Diagnostic",
+    -- },
+    -- q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
   },
 
   -- h = {

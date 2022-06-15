@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 20,
+	size = 15,
   -- TODO: add my own keymapping to <space-t>
 	open_mapping = "<leader>t",
 	hide_numbers = false,
@@ -14,7 +14,7 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	direction = "horizontal",
 	close_on_exit = true,
 	shell = vim.o.shell,
   highlights = {

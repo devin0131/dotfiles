@@ -82,11 +82,12 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "rcarriga/nvim-notify" -- notify
   use "kyazdani42/nvim-web-devicons" -- icons
+  use "aserowy/tmux.nvim" --tmux
 
   -- Telescope
   use {
     "nvim-telescope/telescope.nvim",
-    tag = "nvim-0.6",
+   requires = { {'nvim-lua/plenary.nvim'} },
   }
   use {
     "nvim-telescope/telescope-fzf-native.nvim",
@@ -98,7 +99,6 @@ return packer.startup(function(use)
   -- }
   use "nvim-telescope/telescope-ui-select.nvim"
   use "nvim-telescope/telescope-live-grep-raw.nvim"
-  use "MattesGroeger/vim-bookmarks"
   use "tom-anders/telescope-vim-bookmarks.nvim"
   use "nvim-telescope/telescope-dap.nvim"
 
@@ -128,7 +128,7 @@ return packer.startup(function(use)
   -- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   -- use "RishabhRD/popfix"
   -- use "RishabhRD/nvim-lsputils"
-  use "kosayoda/nvim-lightbulb" -- code action
+  use "p00f/clangd_extensions.nvim"
   use "ray-x/lsp_signature.nvim" -- show function signature when typing
   use "j-hui/fidget.nvim" -- show lsp progress
   -- use {
@@ -147,6 +147,7 @@ return packer.startup(function(use)
     "phaazon/hop.nvim", -- like easymotion, but more powerful
     branch = "v1", -- optional but strongly recommended
   }
+  use "MattesGroeger/vim-bookmarks"
   -- use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
   -- use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
 
@@ -158,13 +159,16 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   -- use "quangnguyen30192/cmp-nvim-tags"
-  use "jsfaint/gen_tags.vim"
-  use "f3fora/cmp-spell" -- spell check
+  -- use "f3fora/cmp-spell" -- spell check
   use "rmagatti/goto-preview"
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
   -- use "github/copilot.vim"  -- Copilot setup,
   -- use {
   --   "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
@@ -174,8 +178,9 @@ return packer.startup(function(use)
 
 
 
-  use "tpope/vim-repeat" --  . command enhance
-  use "tpope/vim-surround" -- vim surround
+  -- use "tpope/vim-repeat" --  . command enhance
+  use "ur4ltz/surround.nvim"
+  -- use "tpope/vim-surround" -- vim surround
   -- use "terryma/vim-expand-region" -- expand/shrink region by +/-
   -- use "meain/vim-printer"
 
@@ -188,22 +193,17 @@ return packer.startup(function(use)
 
   -- use "nathom/filetype.nvim"
 
-  -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Debugger
-  use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
-  use {
-    "ravenxrz/nvim-dap",
-    commit = "f9480362549e2b50a8616fe4530deaabbc4f889b",
-  }
+  -- use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
+  -- use "Pocco81/dap-buddy.nvim"
+  use "mfussenegger/nvim-dap"
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
+  use { "jbyuki/one-small-step-for-vimkind"} -- debug any Lua code running in a Neovim instance
   -- use "nvim-telescope/telescope-file-browser.nvim"
   -- use "mfussenegger/nvim-dap-python"    -- debug python
   -- use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
-  use { "jbyuki/one-small-step-for-vimkind"} -- debug any Lua code running in a Neovim instance
 
   -- Git
   use {
@@ -216,9 +216,6 @@ return packer.startup(function(use)
 
   -- UI
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use "martinsione/darkplus.nvim"
-  -- use "navarasu/onedark.nvim"
   use({
     "catppuccin/nvim",
     as = "catppuccin"
@@ -229,6 +226,16 @@ return packer.startup(function(use)
   }
   use {
     "Mofiqul/vscode.nvim"
+  }
+  use {
+    "ellisonleao/gruvbox.nvim",
+    rtp = "vim",
+  }
+  use {
+    "EdenEast/nightfox.nvim"
+  }
+  use {
+    "phha/zenburn.nvim"
   }
 
   -- use "folke/tokyonight.nvim"
@@ -247,11 +254,15 @@ return packer.startup(function(use)
   --   "kevinhwang91/nvim-hlslens", -- highlight search
   --   disable = true,
   -- }
-  use "kevinhwang91/nvim-bqf" -- better quick fix
+
+  -- 当你的代码出了一些问题然后用这个
+  -- use "kevinhwang91/nvim-bqf" -- better quick fix
   use "folke/trouble.nvim"
+  -- use "RRethy/vim-illuminate" -- highlight undercursor word
+  use "jsfaint/gen_tags.vim"
+  use "kosayoda/nvim-lightbulb" -- code action
+  ----------------------------------
 
-
-  use "RRethy/vim-illuminate" -- highlight undercursor word
   -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
@@ -267,13 +278,8 @@ return packer.startup(function(use)
   -- tools
   -- use "cdelledonne/vim-cmake"
   use "ravenxrz/neovim-cmake"
-  use {
-    "skanehira/preview-markdown.vim",
-    nopt = true,
-    cmd = "PreviewMarkdown",
-  } -- NOTE:: glow required : https://github.com/charmbracelet/glow
   -- use "voldikss/vim-translator"
-  -- use "mtdl9/vim-log-highlighting"
+  use "mtdl9/vim-log-highlighting"
   use "Pocco81/HighStr.nvim"
   -- use "dstein64/vim-startuptime"
   use "ravenxrz/vim-local-history"
@@ -286,8 +292,8 @@ return packer.startup(function(use)
   }
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
-  use "Pocco81/AutoSave.nvim"
-  use "djoshea/vim-autoread"
+  -- use "Pocco81/AutoSave.nvim"
+  -- use "djoshea/vim-autoread"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

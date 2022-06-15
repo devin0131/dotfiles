@@ -238,7 +238,7 @@ cmp_config = {
     },
     { name = "cmp_tabnine" },
     { name = "nvim_lua" },
-    { name = "spell" },
+    -- { name = "spell" },
     { name = "calc" },
     { name = "emoji" },
     -- { name = "treesitter" },

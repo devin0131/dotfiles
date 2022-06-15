@@ -89,11 +89,12 @@ nvim_tree.setup({
       custom_only = true,
       list = {
         -- user mappings go here
-        { key = { "<CR>", "O" },                action = "edit" },
+        { key = { "<CR>", "O", "<2-LeftMouse>" },                action = "edit" },
         { key = "o",                            action = "edit_no_picker" },
         { key = "s",                            action = "split"},
         { key = "v",                            action = "vsplit" },
         { key = "i",                            action = "toggle_file_info" },
+        { key = "E",                            action = "expand_all"},
         -- { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
         -- { key = "<C-e>",                        action = "edit_in_place" },
         -- { key = {"O"},                          action = "edit_no_picker" },
@@ -200,7 +201,7 @@ nvim_tree.setup({
     exclude = {},
   },
   git = {
-    enable = true,
+    enable = false,
     ignore = true,
     timeout = 400,
   },

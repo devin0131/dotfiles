@@ -1,3 +1,4 @@
 **/.local-history
 **/.local_history
 /.tmux/resurrect/
+.luarc.json

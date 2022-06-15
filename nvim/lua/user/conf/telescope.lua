@@ -89,7 +89,7 @@ telescope.setup {
         -- setting `path_display.shorten = { len = 1, exclude = {1, -1} }`
         -- will give a path like:
         --   `alpha/b/g/delta.txt`
-        len = 3, exclude = {1, -1}
+        len = 5, exclude = {1, -1}
       },
     },
 
@@ -210,4 +210,5 @@ telescope.load_extension('fzf')
 telescope.load_extension("ui-select")
 telescope.load_extension('dap')
 telescope.load_extension('vim_bookmarks')
+-- telescope.load_extension("neoclip")
 -- load project extension. see project.lua file

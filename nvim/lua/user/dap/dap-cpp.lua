@@ -3,7 +3,7 @@ local dap = require('dap')
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = "executable",
-  command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',
+  command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7',
 }
 dap.configurations.cpp = {
 -- launch exe

@@ -18,14 +18,23 @@ vim.g.maplocalleader = ";"
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<A-h>", "<C-w>h", opts)
-keymap("n", "<A-j>", "<C-w>j", opts)
-keymap("n", "<A-k>", "<C-w>k", opts)
-keymap("n", "<A-l>", "<C-w>l", opts)
-keymap("i", "<A-h>", "<Esc><C-w>h", opts)
-keymap("i", "<A-j>", "<Esc><C-w>j", opts)
-keymap("i", "<A-k>", "<Esc><C-w>k", opts)
-keymap("i", "<A-l>", "<Esc><C-w>l", opts)
+-- keymap("n", "<A-h>", "<C-w>h", opts)
+-- keymap("n", "<A-j>", "<C-w>j", opts)
+-- keymap("n", "<A-k>", "<C-w>k", opts)
+-- keymap("n", "<A-l>", "<C-w>l", opts)
+-- keymap("i", "<A-h>", "<Esc><C-w>h", opts)
+-- keymap("i", "<A-j>", "<Esc><C-w>j", opts)
+-- keymap("i", "<A-k>", "<Esc><C-w>k", opts)
+-- keymap("i", "<A-l>", "<Esc><C-w>l", opts)
+
+keymap("n", "<A-h>", "<cmd>lua require'tmux'.move_left()<cr>", opts)
+keymap("n", "<A-j>", "<cmd>lua require'tmux'.move_bottom()<cr>", opts)
+keymap("n", "<A-k>", "<cmd>lua require'tmux'.move_top()<cr>", opts)
+keymap("n", "<A-l>", "<cmd>lua require'tmux'.move_right()<cr>", opts)
+keymap("i", "<A-h>", "<Esc><cmd>lua require'tmux'.move_left()<cr>", opts)
+keymap("i", "<A-j>", "<Esc><cmd>lua require'tmux'.move_bottom()<cr>", opts)
+keymap("i", "<A-k>", "<Esc><cmd>lua require'tmux'.move_top()<cr>", opts)
+keymap("i", "<A-l>", "<Esc><cmd>lua require'tmux'.move_right()<cr>", opts)
 
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
@@ -34,15 +43,19 @@ keymap("v", "j", "gj", opts)
 keymap("v", "k", "gk", opts)
 
 -- NOTE: require winshit plugin
-keymap("n", "<C-m>", ":WinShift<cr>", opts)
+keymap("n", "<C-w>m", ":WinShift<cr>", opts)
 
 keymap("v", "<C-j>", "5gj", opts)
 keymap("v", "<C-k>", "5gk", opts)
 keymap("v", "<C-h>", "5h", opts)
 keymap("v", "<C-l>", "5l", opts)
-keymap("n", "<C-j>", "5gj", opts) keymap("n", "<C-k>", "5gk", opts)
+keymap("n", "<C-j>", "5gj", opts) 
+keymap("n", "<C-k>", "5gk", opts)
 keymap("n", "<C-l>", "5l", opts)
 keymap("n", "<C-h>", "5h", opts)
+
+keymap("n", "<leader>v", "<cmd>vsplit<cr>", opts)
+keymap("t", "<esc>", [[<C-\><C-n>]], opts)
 --bufferLine
 -- keymap("n", "<C-u>", ":BufferLinePick<cr>", opts)
 
@@ -87,10 +100,10 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 
 -- Navigate line
-keymap("n", "H", "^", opts)
-keymap("n", "L", "$", opts)
-keymap("v", "H", "^", opts)
-keymap("v", "L", "$", opts)
+-- keymap("n", "H", "^", opts)
+-- keymap("n", "L", "$", opts)
+-- keymap("v", "H", "^", opts)
+-- keymap("v", "L", "$", opts)
 
 -- Insert --
 -- Press jl fast to enter
@@ -134,6 +147,8 @@ keymap("n", "<leader>dn", "<cmd>lua require'dap'.step_over()<cr>", opts)
 keymap("n", "<leader>ds", "<cmd>lua require'dap'.step_into()<cr>", opts)
 keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
 keymap("n", "<leader>df", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
 
 -- keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
@@ -163,3 +178,46 @@ keymap("n", "<leader>df", "<cmd>lua require'dap'.step_out()<cr>", opts)
 --  keymap("n", "<leader>U", ":lua require('user.utils').GtagsRefernce()<cr>", opts)
 --  -- find definition
 --  keymap("n", "<leader>T", ":lua require('user.utils').GtagsText()<cr>", opts)
+--  hop 插件
+-- place this in one of your configuration file(s)
+-- enhance f motion
+keymap('n', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
+keymap('n', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
+keymap('o', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, inclusive_jump = true })<cr>", {})
+keymap('o', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, inclusive_jump = true })<cr>", {})
+keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
+keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
+
+keymap('n', '<leader><leader>w', "<cmd>HopWord<cr>", {})
+keymap('n', '<leader><leader>j', "<cmd>HopLine<cr>", {})
+keymap('n', '<leader><leader>c', "<cmd>HopChar1<cr>", {})
+-- high str keybingds
+vim.api.nvim_set_keymap(
+    "v",
+    "<leader>hh",
+    ":<c-u>HSHighlight 1<CR>",
+    {
+        noremap = true,
+        silent = true
+    }
+)
+vim.api.nvim_set_keymap(
+    "v",
+    "<leader>hr",
+    ":<c-u>HSRmHighlight<CR>",
+    {
+        noremap = true,
+        silent = true
+    }
+)
+vim.api.nvim_set_keymap(
+    "n",
+    "<leader>hr",
+    ":HSRmHighlight<CR>",
+    {
+        noremap = true,
+        silent = true
+    }
+)
+
+
