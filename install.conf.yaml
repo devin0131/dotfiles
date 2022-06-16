@@ -9,7 +9,8 @@
         stdout: true
         quiet: false
     - 
-        command: gg=`pwd` && str="sed -i '/^plugins=(.*)$/csource ${gg}/zsh/zshrcdevin' ~/.zshrc" && eval $str
+        # command: gg=`pwd` && str="sed -i '/^plugins=(.*)$/csource ${gg}/zsh/zshrcdevin' ~/.zshrc" && eval $str
+        command: gg=`pwd` && str="sed -i '/^plugins=(.*)$/asource ${gg}/zsh/zshrcdevin' ~/.zshrc" && eval $str
         description: 将个人的脚本插入.zshrc里边
 
 

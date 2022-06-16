@@ -14,3 +14,6 @@
 [submodule "zsh/themes/fishboned"]
 	path = zsh/themes/fishboned
 	url = https://github.com/sidingxin/fishboned.git
+[submodule "zsh/plugins/zsh-vi-mode"]
+	path = zsh/plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode.git

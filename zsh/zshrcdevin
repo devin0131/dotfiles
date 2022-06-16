@@ -1,1 +1,1 @@
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins+=(zsh-syntax-highlighting zsh-autosuggestions zsh-vi-mode)
