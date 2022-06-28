@@ -125,7 +125,7 @@ nvim_tree.setup({
         { key = "[c",                           action = "prev_git_item" },
         { key = "]c",                           action = "next_git_item" },
         { key = "-",                            action = "dir_up" },
-        -- { key = "s",                            action = "system_open" },
+        { key = "S",                            action = "system_open" },
         { key = "f",                            action = "live_filter" },
         { key = "F",                            action = "clear_live_filter" },
         { key = "q",                            action = "close" },

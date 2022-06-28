@@ -15,7 +15,6 @@ if not status_ok then
   vim.notify("litee_symboltree not found!")
   return
 end
--- vim.notify("目前是成功的。")
 
 litee_lib.setup({
   -- tree = {

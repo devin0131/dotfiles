@@ -23,18 +23,21 @@ M.setup = function()
     "autosave",
     "vim-illuminate",
     "vista",
-    "symbols-outline",
     "nvim-gps",
     "tabout",
     "hlargs",
-    "spellsitter",
     "tabnine",
     "startup",
     "nvim-neoclip",
+    "filetype",
+    "preview-markdown",
+
+    "litee-family",
     "nvim-biscuits",
     "nvim_context_vt",
-    "filetype",
-    "litee-family",
+    "spellsitter",
+    -- "symbols-outline",
+    "aerial",
   }
 
   local helper_set = {}

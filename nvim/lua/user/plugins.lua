@@ -149,7 +149,7 @@ return packer.startup(function(use)
   }
   use "MattesGroeger/vim-bookmarks"
   -- use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
-  -- use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
+  use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
 
   -- cmp plugins
   use {
@@ -251,6 +251,7 @@ return packer.startup(function(use)
   -- use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim" -- status line
   use "goolord/alpha-nvim" -- welcome page
+  use "kdheepak/tabline.nvim"
   -- use "startup-nvim/startup.nvim"     -- welcome page
 
   -- use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
@@ -270,7 +271,7 @@ return packer.startup(function(use)
   -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
-  -- use "simrat39/symbols-outline.nvim" -- outline
+  use "simrat39/symbols-outline.nvim" -- outline
   use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "sindrets/winshift.nvim" -- rerange window layout
@@ -289,11 +290,6 @@ return packer.startup(function(use)
   use "ravenxrz/vim-local-history"
   -- use "henriquehbr/nvim-startup.lua"
   -- use "AckslD/nvim-neoclip.lua"
-  use "vim-test/vim-test"
-  use {
-    "rcarriga/vim-ultest",
-    run = ":UpdateRemotePlugins"
-  }
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
   -- use "Pocco81/AutoSave.nvim"

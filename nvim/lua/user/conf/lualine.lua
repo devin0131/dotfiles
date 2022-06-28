@@ -17,7 +17,7 @@ local diagnostics = {
   symbols = { error = " ", warn = " " },
   colored = false,
   update_in_insert = false,
-  always_visible = true,
+  always_visible = false,
 }
 
 local diff = {
@@ -43,7 +43,8 @@ local mode = {
 local file_name = {
   'filename',
   file_status = true, -- Displays file status (readonly status, modified status)
-  path = 1, -- 0: Just the filename
+  path = 1, 
+  -- 0: Just the filename
   -- 1: Relative path
   -- 2: Absolute path
 
@@ -102,10 +103,11 @@ local config = {
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = { branch, diagnostics },
-    lualine_b = { mode },
-    lualine_c = { file_name },
-    lualine_x = { diff, spaces, "encoding", filetype, "fileformat" },
+    lualine_a = { mode },
+    lualine_b = { file_name },
+    lualine_c = {  },
+    -- lualine_x = { diff, spaces, "encoding", filetype, "fileformat" },
+    lualine_x = { filetype },
     lualine_y = { location },
     lualine_z = { progress },
   },
@@ -117,7 +119,14 @@ local config = {
     lualine_y = {},
     lualine_z = {},
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {'buffers'},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {'branch'},
+    lualine_z = {'tabs'},
+  },
   extensions = {},
 }
 

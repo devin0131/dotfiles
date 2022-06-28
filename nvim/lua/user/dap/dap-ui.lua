@@ -15,26 +15,52 @@ dapui.setup ({
     repl = "r",
     toggle = "t",
   },
-  sidebar = {
-    -- You can change the order of elements in the sidebar
-    elements = {
-      -- Provide as ID strings or tables with "id" and "size" keys
-      {
-        id = "scopes",
-        size = 0.35, -- Can be float or integer > 1
+  layout = {
+    {
+      elements = {
+        'scopes',
+        'watches',
+        'breakpoints',
+        'stacks',
       },
-      { id = "stacks", size = 0.35 },
-      { id = "watches", size = 0.15 },
-      { id = "breakpoints", size = 0.15 },
+      size = 40,
+      position = 'left',
     },
-    size = 40,
-    position = "left", -- Can be "left", "right", "top", "bottom"
+    {
+      elements = {
+        'console',
+      },
+      size = 15,
+      position = 'bottom'
+    },
+    {
+      elements = {
+        'repl',
+      },
+      size = 35,
+      position = 'right'
+    }
   },
-  tray = {
-    elements = { "repl", "console" },
-    size = 10,
-    position = "bottom", -- Can be "left", "right", "top", "bottom"
-  },
+  -- sidebar = {
+  --   -- You can change the order of elements in the sidebar
+  --   elements = {
+  --     -- Provide as ID strings or tables with "id" and "size" keys
+  --     {
+  --       id = "scopes",
+  --       size = 0.35, -- Can be float or integer > 1
+  --     },
+  --     { id = "stacks", size = 0.35 },
+  --     { id = "watches", size = 0.15 },
+  --     { id = "breakpoints", size = 0.15 },
+  --   },
+  --   size = 40,
+  --   position = "left", -- Can be "left", "right", "top", "bottom"
+  -- },
+  -- tray = {
+  --   elements = { "repl", "console" },
+  --   size = 10,
+  --   position = "bottom", -- Can be "left", "right", "top", "bottom"
+  -- },
   floating = {
     max_height = nil, -- These can be integers or a float between 0 and 1.
     max_width = nil, -- Floats will be treated as percentage of your screen.

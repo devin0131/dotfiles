@@ -3,7 +3,6 @@
 -- local colorscheme = "darkplus"
 -- local colorscheme = "github_light"
 -- local colorscheme = "vscode"
--- require "user.conf.github-nvim-theme"
 -- local colorscheme = "default"
 -- local colorscheme = "gruvbox"
 -- local colorscheme = "nightfox"
@@ -11,7 +10,7 @@
 local colorscheme = "melange"
 
 if colorscheme == "onedark" then
-  rjquire "user.themes.onedark"
+  require "user.themes.onedark"
 elseif colorscheme == "catppuccin" then
   require "user.themes.catppuccin"
 elseif colorscheme == "github_dark" then
