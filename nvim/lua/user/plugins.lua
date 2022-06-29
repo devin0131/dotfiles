@@ -83,7 +83,6 @@ return packer.startup(function(use)
   use "rcarriga/nvim-notify" -- notify
   use "kyazdani42/nvim-web-devicons" -- icons
   use "aserowy/tmux.nvim" --tmux
-  use "ianding1/leetcode.vim"
 
 
   -- Telescope
